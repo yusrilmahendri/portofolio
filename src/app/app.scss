@@ -147,17 +147,17 @@
   animation: fade-in-scale 1s ease-out 0.5s both;
   
   @media (max-width: 1199px) {
-    left: 50%;
+    left: 40%;
   }
   
   @media (max-width: 992px) {
     position: relative;
-    left: auto;
-    top: auto;
     transform: none;
     text-align: center;
-    margin: 2rem auto 0;
+    margin: 5rem auto 0;
+    left: 50%;
     width: 100%;
+    margin-bottom: -50%;
   }
 }
 
