@@ -1,0 +1,322 @@
+<app-navbar-components></app-navbar-components>
+
+<!-- Hero Section -->
+<section id="about" class="hero-section py-5 fade-in-section">
+  <div class="container position-relative">
+    <div class="row align-items-start">
+      <!-- Left Column: Name, Title, Social, Contact Button -->
+      <div class="col-12 col-md-12 col-lg-5 mb-4 mb-lg-0 text-center text-lg-start">
+        <h1 class="hero-name mb-3">YUSRIL &nbsp;&nbsp; MAHENDRI</h1>
+        <p class="hero-subtitle mb-4">Software Engineering</p>
+        
+        <div class="social-links mb-4 justify-content-center justify-content-lg-start">
+          <a href="https://www.instagram.com/yusril.mahendri/" class="social-icon instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yusrilmahendri/" class="social-icon linkedin">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/yusrilmahendri" class="social-icon github">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        
+        <button class="btn btn-contact px-4 py-2 rounded-pill">
+          Contact Me <i class="bi bi-arrow-up-right ms-2"></i>
+        </button>
+      </div>
+      
+      <!-- Right Column: About Me Text -->
+      <div class="col-12 col-md-12 col-lg-7">
+        <div class="about-text text-center text-lg-start">
+          <p>I hold a Bachelor's degree in Computer Science from Ahmad Dahlan University, Yogyakarta, graduated in 2023 with a focus on Software Engineering. Currently, I am pursuing a Master's degree in Informatics at the Islamic University of Indonesia to further enhance my expertise in the field of technology.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Profile Image: Center, Prominent, Overlapping -->
+    <div class="profile-image-center">
+      <img [src]="profileImageSrc" 
+           alt="Yusril Mahendri" 
+           class="profile-image"
+           (error)="onImageError($event)">
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stacks Section -->
+<section class="tech-stacks-section py-5 fade-in-section">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">EXPERIENCED IN DIVERSE TECH STACKS</h2>
+    <div class="tech-stacks-wrapper">
+      <div class="tech-stacks-scroll">
+        <div class="tech-stacks-track" *ngFor="let tech of techStacks">
+          <div class="tech-card">
+            <i [class]="'bi ' + tech.icon" [style.color]="tech.color"></i>
+            <span>{{ tech.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statistics and Experiences Section -->
+<section id="experiences" class="stats-experiences-section py-5 fade-in-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+        <div class="row g-3">
+          <div class="col-6 col-sm-6">
+            <div class="card-dark text-center">
+              <h3 class="stat-number">4+</h3>
+              <p class="stat-label">Experienced Years</p>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6">
+            <div class="card-dark text-center">
+              <h3 class="stat-number">6</h3>
+              <p class="stat-label">Satisfied Companies</p>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6">
+            <div class="card-dark text-center">
+              <h3 class="stat-number">11</h3>
+              <p class="stat-label">Entrusted Positions</p>
+            </div>
+          </div>
+          <div class="col-6 col-sm-6">
+            <div class="card-dark text-center">
+              <h3 class="stat-number">10</h3>
+              <p class="stat-label">Completed Portfolios</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-8">
+        <h2 class="section-title mb-4">WORK EXPERIENCES</h2>
+        <div class="experiences-list">
+          <div class="experience-item mb-4">
+            <h4 class="experience-company">Universitas Islam Indonesia</h4>
+            <p class="experience-role">Frontend Engineer</p>
+            <p class="experience-period">Contract (Onsite) - Oct 2023 - Aug 2025, Yogyakarta</p>
+          </div>
+          
+          <div class="experience-item mb-4">
+            <h4 class="experience-company">Jasa Turnitin</h4>
+            <p class="experience-role">Lead Information Technology Project Manager</p>
+            <p class="experience-period">Part time (WFH) - Sep 2022 - Jun 2025, Yogyakarta</p>
+          </div>
+          
+          <div class="experience-item mb-4">
+            <h4 class="experience-company">Pioneer Solve</h4>
+            <p class="experience-role">CEO</p>
+            <p class="experience-period">Hybrid Nov 2022, Bangka Belitung</p>
+          </div>
+          
+          <div class="experience-item mb-4">
+            <h4 class="experience-company">Universitas Ahmad Dahlan</h4>
+            <p class="experience-role">Optimization of Informatics Laboratory Assistant Techniques</p>
+            <p class="experience-period">Contract (Onsite) - Nov 2022 - Sep 2023, Yogyakarta</p>
+          </div>
+          
+          <div class="experience-item mb-4">
+            <h4 class="experience-company">SD Aisyiyah Metro</h4>
+            <p class="experience-role">Software Engineer</p>
+            <p class="experience-period">Contract (WFH) - Oct 2022 - May 2023, Lampung</p>
+          </div>
+          
+          <div class="experience-item mb-4">
+            <h4 class="experience-company">PT. Timah (persero) Tbk</h4>
+            <p class="experience-role">Full Stack Developer</p>
+            <p class="experience-period">Internship (Onsite) - Jan 2020 - Sep 2022, Bangka</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section py-5 fade-in-section">
+  <div class="container">
+    <h2 class="section-title mb-5">OUR PROJECTS</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="project-card card-dark">
+          <div class="project-image mb-3">
+            <img src="assets/images/forum.png" 
+                 alt="Application Forum Discussion" 
+                 class="img-fluid rounded">
+          </div>
+          <h4 class="project-title mb-2">Application Forum Discussion</h4>
+          <p class="project-description mb-3">
+            POS (Point of Sale) application is a digital system used by business owners to process sales transactions directly. In short, POS is a modern version of conventional cash registers that are now integrated with various business management features.
+          </p>
+          <button class="btn btn-orange btn-sm">
+            Detail Project <i class="bi bi-arrow-up-right ms-2"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="project-card card-dark">
+          <div class="project-image mb-3">
+            <img src="assets/images/ekantin.png" 
+                 alt="Application E kantin" 
+                 class="img-fluid rounded">
+          </div>
+          <h4 class="project-title mb-2">Application E kantin</h4>
+          <p class="project-description mb-3">
+            I pioneered the development of an e-canteen application, which allows students to process transactions digitally through student card scanning, eliminating the need for cash. This application allows parents to monitor their children's spending. The project was developed by a team of three, with a focus on achieving timely completion.
+          </p>
+          <button class="btn btn-orange btn-sm">
+            Detail Project <i class="bi bi-arrow-up-right ms-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="project-card card-dark">
+          <div class="project-image mb-3">
+            <img src="assets/images/pos.png" 
+                 alt="Application E kantin" 
+                 class="img-fluid rounded">
+          </div>
+          <h4 class="project-title mb-2">Application Pos for Cashier</h4>
+          <p class="project-description mb-3">
+            I pioneered the development of an e-canteen application, which allows students to process transactions digitally through student card scanning, eliminating the need for cash. This application allows parents to monitor their children's spending. The project was developed by a team of three, with a focus on achieving timely completion.
+          </p>
+          <button class="btn btn-orange btn-sm">
+            Detail Project <i class="bi bi-arrow-up-right ms-2"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="project-card card-dark">
+          <div class="project-image mb-3">
+            <img src="assets/images/ga.png" 
+                 alt="Project 3" 
+                 class="img-fluid rounded">
+          </div>
+          <h4 class="project-title mb-2">Development Effort Estimation</h4>
+          <p class="project-description mb-3">
+            Conducting an effort estimate with a focus on the agile software development model using an estimation algorithm. The estimation algorithm used is a genetic algorithm.
+          </p>
+          <button class="btn btn-orange btn-sm">
+            Detail Project <i class="bi bi-arrow-up-right ms-2"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="project-card card-dark">
+          <div class="project-image mb-3">
+            <img src="assets/images/wedding.png" 
+                 alt="Wedding Invitation Application" 
+                 class="img-fluid rounded">
+          </div>
+          <h4 class="project-title mb-2">Wedding Invitation Application</h4>
+          <p class="project-description mb-3">
+            In the Turnitin service division, I serve as the Product Manager for the software and website development services. I am responsible for overseeing the planning, development, and delivery of custom-built digital solutions provided under this service.
+          </p>
+          <button class="btn btn-orange btn-sm">
+            Detail Project <i class="bi bi-arrow-up-right ms-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="project-card card-dark">
+          <div class="project-image mb-3">
+            <img src="assets/images/library.png" 
+                 alt="Perpustakaan Digital" 
+                 class="img-fluid rounded">
+          </div>
+          <h4 class="project-title mb-2">Perpustakaan Digital</h4>
+          <p class="project-description mb-3">
+            This website-based library application can be used by schools, both elementary and secondary schools. It offers numerous features for both admin and user use.
+          </p>
+          <button class="btn btn-orange btn-sm">
+            Detail Project <i class="bi bi-arrow-up-right ms-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="project-card card-dark">
+          <div class="project-image mb-3">
+            <img src="assets/images/inventaris.png" 
+                 alt="Perpustakaan Digital" 
+                 class="img-fluid rounded">
+          </div>
+          <h4 class="project-title mb-2">Inventory Barang dan Jasa</h4>
+          <p class="project-description mb-3">
+            Inventory of goods and services uses the first in first out (FIFO) model, and has butterstock and safety stock
+          </p>
+          <button class="btn btn-orange btn-sm">
+            Detail Project <i class="bi bi-arrow-up-right ms-2"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="project-card card-dark">
+          <div class="project-image mb-3">
+            <img src="assets/images/gateway.png" 
+                 alt="UII GATEWAY" 
+                 class="img-fluid rounded">
+          </div>
+          <h4 class="project-title mb-2">UII GATEWAY</h4>
+          <p class="project-description mb-3">
+            Creating and developing a website-based information system called UIIGateway. The systems I have created and developed include UIIGateway Partnership, UIIGateway Monitoring and Evaluation, UIIGateway Services, and UIIGateway Surveys.
+          </p>
+          <a href="https://gateway.uii.ac.id/account/login" type ="button" class="btn btn-orange btn-sm">
+            Detail Project <i class="bi bi-arrow-up-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="footer-section py-5 fade-in-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 col-lg-6 mb-4 mb-lg-0 text-center text-md-start">
+        <h3 class="footer-name mb-3">Yusril Mahendri</h3>
+        <p class="footer-text">
+          Interested in collaborating? Start a conversation at 
+          <a href="mailto:yusrilmahendri.yusril@gmail.com" class="footer-email">yusrilmahendri.yusril@gmail.com</a>
+        </p>
+      </div>
+      
+      <div class="col-12 col-md-6 col-lg-6 text-center text-md-end text-lg-end">
+        <div class="social-links">
+          <a href="https://www.instagram.com/yusril.mahendri/" class="social-icon instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yusrilmahendri/" class="social-icon linkedin">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/yusrilmahendri" class="social-icon github">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <p class="copyright-text">
+          All rights reserved. © Copyright Yusril Mahendri 2025
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <router-outlet></router-outlet>

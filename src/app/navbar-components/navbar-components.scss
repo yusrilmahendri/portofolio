@@ -1,0 +1,67 @@
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: transparent;
+}
+
+/* NAV LINK */
+.nav-link {
+  color: var(--text-white) !important;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    color: var(--accent-pink) !important;
+  }
+}
+
+/* ACTIVE */
+.custom-active {
+  color: var(--accent-pink) !important;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: 0;
+    height: 2px;
+    background: var(--accent-pink);
+  }
+}
+
+/* TOGGLER */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* BUTTON */
+.btn-orange {
+  background: var(--accent-orange);
+  color: white;
+  border-radius: 50px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+}
+
+/* MOBILE & TABLET */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+  }
+}

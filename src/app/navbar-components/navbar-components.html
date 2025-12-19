@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container">
+
+    <!-- BRAND (opsional) -->
+    <a class="navbar-brand d-lg-none text-white fw-bold" href="#">
+      YM
+    </a>
+
+    <!-- TOGGLER -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mainNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- COLLAPSE -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+
+      <!-- NAV LINKS -->
+      <ul class="navbar-nav mx-auto gap-lg-4 text-center">
+        <li class="nav-item">
+          <a class="nav-link"
+             [class.custom-active]="activeSection === 'about'"
+             (click)="scrollToSection('about')">
+            About Me
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             [class.custom-active]="activeSection === 'experiences'"
+             (click)="scrollToSection('experiences')">
+            Experiences
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             [class.custom-active]="activeSection === 'projects'"
+             (click)="scrollToSection('projects')">
+            Projects
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             [class.custom-active]="activeSection === 'contact'"
+             (click)="scrollToSection('contact')">
+            Contact Me
+          </a>
+        </li>
+      </ul>
+
+      <!-- BUTTON -->
+      <div class="text-center mt-3 mt-lg-0">
+        <button class="btn btn-orange" (click)="downloadCV()">
+          Download CV <i class="bi bi-arrow-up"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
